@@ -1,0 +1,41 @@
+@page
+@model wt_lab5_5razor_cherevan.Pages.Tasks.DetailsModel
+@{
+    ViewData["Title"] = "Подробнее о задаче";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-body p-4">
+                    <!-- Выводим данные задачи из PageModel -->
+                    <span class="badge bg-secondary mb-3">ID: @Model.Task!.Id</span>
+                    <h2 class="fw-bold mb-4">@Model.Task.Title</h2>
+
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item bg-transparent">
+                            <b>Проект:</b> @Model.Task.Project
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <b>Исполнитель:</b> @Model.Task.Assignee
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <b>Оценка:</b> @Model.Task.EstimateHours ч.
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <b>Статус:</b> <span class="badge bg-info text-dark">@Model.Task.Status</span>
+                        </li>
+                    </ul>
+
+                    <!-- Ссылка "Назад" -->
+                    <div class="d-flex gap-2 mt-4">
+    <a asp-page="./Index" class="btn btn-outline-secondary">← Назад к списку</a>
+    <!-- Вот наша кнопка Изменить -->
+    <a asp-page="./Edit" asp-route-id="@Model.Task!.Id" class="btn btn-warning">Изменить задачу</a>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="container py-5">
+    <div class="card shadow-lg rounded-4 border-0 mt-5">
+        <div class="card-body text-center p-5">
+            <h1 class="fw-bold mb-3 display-5">Система управления IT-проектами</h1>
+            <p class="text-muted fs-5 mb-4">
+                Веб-приложение на ASP.NET Core Razor Pages
+            </p>
+            
+            <!-- Кнопка "Главная" удалена, осталась только "Задачи" -->
+            <div class="d-flex justify-content-center gap-3">
+                <a href="/Tasks/Index" class="btn btn-primary btn-lg px-5 shadow-sm">
+                    Задачи
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin-bottom: 60px;
+  /* Персиково-розовый фон */
+  background: linear-gradient(135deg, #ffedd5 0%, #fecdd3 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* --- КАРТОЧКИ --- */
+.card {
+    /* Делаем карточки нежно-розовыми (чтобы точно отличались от белого) */
+    background-color: #fff1f2 !important; 
+    border: 1px solid #fecdd3 !important; /* Розовая рамка */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.card:hover {
+    transform: translateY(-3px); /* Легкий подъем при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* --- ТАБЛИЦА --- */
+.table-responsive {
+    background-color: #fff1f2 !important; /* Тот же розовый для таблицы */
+    border: 1px solid #fecdd3;
+}
+
+/* --- КНОПКИ --- */
+.btn-primary {
+    background-color: #e11d48 !important; /* Малиновый */
+    border-color: #e11d48 !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: #be123c !important;
+    border-color: #be123c !important;
+}
+
+/* Кнопка "Подробнее" */
+.btn-outline-primary {
+    color: #e11d48 !important;
+    border-color: #e11d48 !important;
+}
+.btn-outline-primary:hover {
+    background-color: #e11d48 !important;
+    color: white !important;
+}
+
+/* --- ФОРМА --- */
+.form-control:focus, .form-select:focus {
+    border-color: #e11d48 !important;
+    box-shadow: 0 0 0 0.25rem rgba(225, 29, 72, 0.15) !important;
+}
+/* --- HOVER-ЭФФЕКТЫ --- */
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Кнопки при наведении немного увеличиваются и получают тень */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Карточки при наведении поднимаются вверх */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Ссылки в навбаре при наведении меняют цвет */
+.navbar-nav .nav-link {
+    transition: color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+    color: #fbbf24 !important; /* Желтоватый цвет */
+}

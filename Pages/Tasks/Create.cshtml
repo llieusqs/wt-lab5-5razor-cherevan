@@ -1,0 +1,61 @@
+@page
+@model wt_lab5_5razor_cherevan.Pages.Tasks.CreateModel
+@{
+    ViewData["Title"] = "Новая задача";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-body p-4">
+                    <h2 class="fw-bold mb-4">Добавить задачу</h2>
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="Task.Title" class="form-label">Название задачи</label>
+                            <input asp-for="Task.Title" class="form-control" />
+                            <span asp-validation-for="Task.Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Task.Project" class="form-label">Проект</label>
+                            <input asp-for="Task.Project" class="form-control" />
+                            <span asp-validation-for="Task.Project" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Task.Assignee" class="form-label">Исполнитель</label>
+                            <input asp-for="Task.Assignee" class="form-control" />
+                            <span asp-validation-for="Task.Assignee" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Task.EstimateHours" class="form-label">Оценка (в часах)</label>
+                            <input asp-for="Task.EstimateHours" class="form-control" type="number" step="0.5" />
+                            <span asp-validation-for="Task.EstimateHours" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Task.Status" class="form-label">Статус</label>
+                            <select asp-for="Task.Status" class="form-select">
+                                <option>To Do</option>
+                                <option>In Progress</option>
+                                <option>Done</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-4">
+                            <button type="submit" class="btn btn-success px-4">Сохранить</button>
+                            <a asp-page="./Index" class="btn btn-outline-secondary">Назад к списку</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
