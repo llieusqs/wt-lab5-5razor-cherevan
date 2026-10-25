@@ -21,8 +21,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+app.MapRazorPages(); // Вот здесь мы убрали .WithStaticAssets()
 
 app.Run();
